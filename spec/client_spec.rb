@@ -128,7 +128,7 @@ describe SwiftypeAppSearch::Client do
         client.create_engine(engine_name)
 
         engines = client.list_engines(:current => 1, :size => 20)['results']
-        expect(engines.find { |e| e['name'] == engine_name }).to_not be_nil
+        expect(engines.find { |e| e['name'] == engine_name }).to be_nil
       end
     end
 
